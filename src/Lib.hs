@@ -24,7 +24,6 @@ import           Web.Slack.Message            (sendMessage)
 someFunc :: IO ()
 someFunc = do
     slackConfig <- envMkSlackConfig "SLACK_API_TOKEN"
-    --let config = SlackConfig { _slackApiToken = "xoxb-267381093382-X4yMFh37nbeuuP1XsBev73LV" }
     runBot slackConfig echoBot ()
 
 envMkSlackConfig :: String -> IO SlackConfig
